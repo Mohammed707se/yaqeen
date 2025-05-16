@@ -32,12 +32,12 @@
 ## 🔧 كيفية الاستخدام
 1. قم بتنزيل أو استنساخ المشروع من GitHub
 ```bash
-git clone https://github.com/username/health-analytics-system.git
+git clone https://github.com/Mohammed707se/yaqeen.git
 ```
 
 2. افتح الصفحات في المتصفح مباشرة أو استخدم خادم ويب محلي
 ```bash
-cd health-analytics-system
+cd yaqeen
 # استخدم خادم ويب بسيط باستخدام بايثون إذا كان متاحاً
 python -m http.server 8000
 ```
