@@ -1,0 +1,4351 @@
+[
+  {
+    "facilityId": "2878",
+    "facilityName": "المحمدية 2",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.72781",
+    "facilityLongitude": "46.64655",
+    "contactNo1": "4978037",
+    "fax1": null,
+    "facilityCd": "3918",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "0.99",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "3000.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1295",
+    "facilityName": "الأمير محمد بن سعود الكبير( الرائد )",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.70908",
+    "facilityLongitude": "46.6343",
+    "contactNo1": "8001277",
+    "fax1": "114305889",
+    "facilityCd": "642",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "1.65",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1656",
+    "facilityName": "المحمدية القطاع الشمالي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.73271",
+    "facilityLongitude": "46.65827",
+    "contactNo1": "4706560",
+    "fax1": "11470656",
+    "facilityCd": "1045",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "1.94",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1710",
+    "facilityName": "أم الحمام",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.696961",
+    "facilityLongitude": "46.649006",
+    "contactNo1": "114822",
+    "fax1": "11482204",
+    "facilityCd": "1101",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "2.46",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "3664",
+    "facilityName": "مستشفى صحة الافتراضي",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "60",
+      "directorateName": "مستشفى صحة الافتراضي",
+      "directorateCd": "30"
+    },
+    "facilityLatitude": "24.74239",
+    "facilityLongitude": "46.63708",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "5050",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "2.78",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2858",
+    "facilityName": "الخزامى",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.710552",
+    "facilityLongitude": "46.614522",
+    "contactNo1": "8001277",
+    "fax1": "11800127",
+    "facilityCd": "3898",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "3.36",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1753",
+    "facilityName": "حي الملك فهد بالقطاع الشمالي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7417627",
+    "facilityLongitude": "46.6708119",
+    "contactNo1": "1277000",
+    "fax1": "114542577",
+    "facilityCd": "1146",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "3.54",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1691",
+    "facilityName": "الورود",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.730629",
+    "facilityLongitude": "46.683845",
+    "contactNo1": "1277000",
+    "fax1": "112051330",
+    "facilityCd": "1082",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "4.00",
+    "before_appointment_hours": "5",
+    "after_appointment_hours": "5",
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3561",
+    "facilityName": "عيادة صحة المرأة والطفل بحياة مول",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.742896",
+    "facilityLongitude": "46.679185",
+    "contactNo1": "8001277000",
+    "fax1": "1234567",
+    "facilityCd": "9921",
+    "hisEnabledFacility": false,
+    "isOpen": false,
+    "facilityDistance": "4.25",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1100",
+    "facilityName": "مجمع إرادة للصحة النفسية بالرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.7193106",
+    "facilityLongitude": "46.6034958",
+    "contactNo1": "9661148",
+    "fax1": "966114804",
+    "facilityCd": "22",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "4.34",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1781",
+    "facilityName": "صلاح الدين",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.733494",
+    "facilityLongitude": "46.691618",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "1174",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "4.84",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1661",
+    "facilityName": "المروج",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7556425",
+    "facilityLongitude": "46.6746845",
+    "contactNo1": "1277000",
+    "fax1": "112252117",
+    "facilityCd": "1051",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "4.98",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1577",
+    "facilityName": "السليمانية بالرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.70522",
+    "facilityLongitude": "46.69569",
+    "contactNo1": "1277000",
+    "fax1": "114657650",
+    "facilityCd": "966",
+    "hisEnabledFacility": true,
+    "isOpen": true,
+    "facilityDistance": "5.20",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1296",
+    "facilityName": "الغدير",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.768005",
+    "facilityLongitude": "46.650841",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "643",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "5.48",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1659",
+    "facilityName": "المرسلات",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.74954",
+    "facilityLongitude": "46.69823",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "1049",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "6.24",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1663",
+    "facilityName": "المصيف",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.773",
+    "facilityLongitude": "46.67945",
+    "contactNo1": "1277000",
+    "fax1": "114545714",
+    "facilityCd": "1053",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "6.88",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2892",
+    "facilityName": "مركز صحي النزهة ",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.754916",
+    "facilityLongitude": "46.702254",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3932",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "6.91",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1790",
+    "facilityName": "عرقة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.681714",
+    "facilityLongitude": "46.5876495",
+    "contactNo1": "4803307",
+    "fax1": "11480301",
+    "facilityCd": "1183",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "7.24",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1496",
+    "facilityName": "إسكان المعذر",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6760776",
+    "facilityLongitude": "46.7024165",
+    "contactNo1": "4610371",
+    "fax1": "114990718",
+    "facilityCd": "882",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "7.40",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1593",
+    "facilityName": "الصحافة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.793532",
+    "facilityLongitude": "46.639273",
+    "contactNo1": "1277000",
+    "fax1": "114876732",
+    "facilityCd": "982",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "8.33",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2903",
+    "facilityName": "حطين",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.77908",
+    "facilityLongitude": "46.59033",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3943",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "8.77",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1658",
+    "facilityName": "المربع",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6619261",
+    "facilityLongitude": "46.7104822",
+    "contactNo1": "966114050778",
+    "fax1": "966114050778",
+    "facilityCd": "1048",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "9.06",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1690",
+    "facilityName": "الوادي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.78794",
+    "facilityLongitude": "46.69737",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "1081",
+    "hisEnabledFacility": true,
+    "isOpen": true,
+    "facilityDistance": "9.24",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2881",
+    "facilityName": "الملقا",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.79039",
+    "facilityLongitude": "46.599561",
+    "contactNo1": "8001277",
+    "fax1": "11800127",
+    "facilityCd": "3921",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "9.26",
+    "before_appointment_hours": "15",
+    "after_appointment_hours": "15",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2861",
+    "facilityName": "الربيع",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.8017363",
+    "facilityLongitude": "46.6713125",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3901",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "9.55",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1606",
+    "facilityName": "العريجاء القديمة",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.63015",
+    "facilityLongitude": "46.65801",
+    "contactNo1": "966114359951",
+    "fax1": "966114359951",
+    "facilityCd": "995",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "9.95",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1671",
+    "facilityName": "الملز",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.67022",
+    "facilityLongitude": "46.73047",
+    "contactNo1": "966114763243",
+    "fax1": "966114763243",
+    "facilityCd": "1062",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "10.07",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "3646",
+    "facilityName": "مركز الأمير سلطان ",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.632733",
+    "facilityLongitude": "46.614121",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "5081",
+    "hisEnabledFacility": true,
+    "isOpen": true,
+    "facilityDistance": "10.13",
+    "before_appointment_hours": "15",
+    "after_appointment_hours": "15",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3144",
+    "facilityName": "مجمع عيادات غرب الرياض لطب الاسنان",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6388855",
+    "facilityLongitude": "46.5955902",
+    "contactNo1": "2472944",
+    "fax1": "1234567",
+    "facilityCd": "4421",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "10.28",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2912",
+    "facilityName": "لبن الشرقي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.6540428",
+    "facilityLongitude": "46.573129",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3952",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "10.35",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2853",
+    "facilityName": "الازدهار",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.785925",
+    "facilityLongitude": "46.717884",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3893",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "10.37",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2872",
+    "facilityName": "الفلاح",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.79392",
+    "facilityLongitude": "46.7088561",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3912",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "10.46",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1632",
+    "facilityName": "الفوطة",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.63756",
+    "facilityLongitude": "46.70781",
+    "contactNo1": "4118836",
+    "fax1": "114118836",
+    "facilityCd": "1021",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "10.97",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1083",
+    "facilityName": "مستشفى الأطفال بمدينة الملك سعود الطبية",
+    "facilityTypeVO": {
+      "facilityTypeId": "6",
+      "facilityTypeName": "مرجعي"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6265",
+    "facilityLongitude": "46.6897",
+    "contactNo1": "966114356666",
+    "fax1": "966114356666",
+    "facilityCd": "2",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "11.17",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1294",
+    "facilityName": "مركز عبدالمنعم الراشد بالدرعية ",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.7531367",
+    "facilityLongitude": "46.5419225",
+    "contactNo1": "8001277",
+    "fax1": null,
+    "facilityCd": "641",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "11.23",
+    "before_appointment_hours": "10",
+    "after_appointment_hours": "10",
+    "smart_checkin_distance": "500.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2683",
+    "facilityName": "الحمراء",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.77049",
+    "facilityLongitude": "46.74417",
+    "contactNo1": "8001277",
+    "fax1": null,
+    "facilityCd": "3409",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "11.42",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3321",
+    "facilityName": "مستشفى الدرعية",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.7882613",
+    "facilityLongitude": "46.5585913",
+    "contactNo1": "8001277",
+    "fax1": "11800127",
+    "facilityCd": "4575",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "11.76",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3571",
+    "facilityName": "مركز الاستشارات الاجتماعية عن بعد",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.69997",
+    "facilityLongitude": "46.762722",
+    "contactNo1": null,
+    "fax1": "1234567",
+    "facilityCd": "9912",
+    "hisEnabledFacility": false,
+    "isOpen": false,
+    "facilityDistance": "11.94",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "الربو",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1565",
+    "facilityName": "الروضة 1 بالقطاع الشرقي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7422133",
+    "facilityLongitude": "46.7620998",
+    "contactNo1": "1277000",
+    "fax1": "114220153",
+    "facilityCd": "954",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "11.97",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2900",
+    "facilityName": "الياسمين",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.8260098",
+    "facilityLongitude": "46.624999",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3940",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "12.11",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1298",
+    "facilityName": "المرقب",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6343125",
+    "facilityLongitude": "46.7248125",
+    "contactNo1": "2861436",
+    "fax1": "112861436",
+    "facilityCd": "645",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "12.30",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "الربو",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1094",
+    "facilityName": "مستشفى الملك سلمان بن عبد العزيز",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6068147",
+    "facilityLongitude": "46.6421616",
+    "contactNo1": "966114311100",
+    "fax1": "966114311100",
+    "facilityCd": "16",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "12.48",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1788",
+    "facilityName": "ظهرة البديعة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.605216",
+    "facilityLongitude": "46.668642",
+    "contactNo1": "4261743",
+    "fax1": "114261743",
+    "facilityCd": "1181",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "12.85",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1605",
+    "facilityName": "العريجاء الاوسط",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.602502",
+    "facilityLongitude": "46.628081",
+    "contactNo1": "4300972",
+    "fax1": "114300972",
+    "facilityCd": "994",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "13.09",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2913",
+    "facilityName": "لبن الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.62205",
+    "facilityLongitude": "46.56629",
+    "contactNo1": "2983597",
+    "fax1": null,
+    "facilityCd": "3953",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "13.49",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2883",
+    "facilityName": "حي الملك فيصل",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.767534",
+    "facilityLongitude": "46.772925",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3923",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "13.88",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1766",
+    "facilityName": "سلطانة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5979",
+    "facilityLongitude": "46.67984",
+    "contactNo1": "2660305",
+    "fax1": "114577527",
+    "facilityCd": "1159",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "13.88",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2863",
+    "facilityName": "الروضة ٢ بالقطاع الشرقي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7303928",
+    "facilityLongitude": "46.7834973",
+    "contactNo1": "1277000",
+    "fax1": "114541070",
+    "facilityCd": "3903",
+    "hisEnabledFacility": true,
+    "isOpen": true,
+    "facilityDistance": "13.91",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1297",
+    "facilityName": "عتيقة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.60756",
+    "facilityLongitude": "46.71094",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "644",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.00",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "3354",
+    "facilityName": "صحه المرأه والطفل",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.600904",
+    "facilityLongitude": "46.69761",
+    "contactNo1": null,
+    "fax1": "1234567",
+    "facilityCd": "4740",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.11",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1807",
+    "facilityName": "غرناطة",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.80075",
+    "facilityLongitude": "46.754417",
+    "contactNo1": "8001277",
+    "fax1": "445555555",
+    "facilityCd": "1200",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.21",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1804",
+    "facilityName": "غبيراء",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.62406",
+    "facilityLongitude": "46.740812",
+    "contactNo1": "4485947",
+    "fax1": "114485947",
+    "facilityCd": "1197",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.23",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3163",
+    "facilityName": "مجمع عيادات طب الأسنان بشرق الرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7523342",
+    "facilityLongitude": "46.7826236",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "4543",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.25",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2890",
+    "facilityName": "النرجس 1",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.8433038",
+    "facilityLongitude": "46.6806113",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3930",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.26",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2910",
+    "facilityName": "لبن 2",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.6258104",
+    "facilityLongitude": "46.5481883",
+    "contactNo1": "4303674",
+    "fax1": null,
+    "facilityCd": "3950",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.35",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1579",
+    "facilityName": "السويدي العام",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.58867",
+    "facilityLongitude": "46.66098",
+    "contactNo1": "4256023",
+    "fax1": "114256023",
+    "facilityCd": "968",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.57",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2909",
+    "facilityName": "قرطبة ",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.817956",
+    "facilityLongitude": "46.742903",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3949",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.71",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1770",
+    "facilityName": "شبرا",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5877342",
+    "facilityLongitude": "46.6698307",
+    "contactNo1": "966114254860",
+    "fax1": "966114254860",
+    "facilityCd": "1163",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.79",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1310",
+    "facilityName": "مستشفى الأمير محمد بن عبدالعزيز",
+    "facilityTypeVO": {
+      "facilityTypeId": "6",
+      "facilityTypeName": "مرجعي"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.708823",
+    "facilityLongitude": "46.7931529",
+    "contactNo1": "8001277000",
+    "fax1": "966112616666",
+    "facilityCd": "657",
+    "hisEnabledFacility": false,
+    "isOpen": false,
+    "facilityDistance": "14.87",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1101",
+    "facilityName": "مستشفى اليمامة",
+    "facilityTypeVO": {
+      "facilityTypeId": "6",
+      "facilityTypeName": "مرجعي"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7165105",
+    "facilityLongitude": "46.7938869",
+    "contactNo1": "8001277000",
+    "fax1": "966114914444",
+    "facilityCd": "23",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.90",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "239",
+    "facilityName": "مركز طب الأسنان بمستشفى اليمامة",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.716618",
+    "facilityLongitude": "46.793897",
+    "contactNo1": null,
+    "fax1": "114914444",
+    "facilityCd": "4251",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "14.90",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": "10.0",
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1673",
+    "facilityName": "المنار",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.72391",
+    "facilityLongitude": "46.79569",
+    "contactNo1": "1277000",
+    "fax1": "112320322",
+    "facilityCd": "1064",
+    "hisEnabledFacility": true,
+    "isOpen": true,
+    "facilityDistance": "15.09",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3256",
+    "facilityName": "مجمع عيادات طب الأسنان بشمال الرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.8541666",
+    "facilityLongitude": "46.6311536",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "4591",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.12",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": "10.0",
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2899",
+    "facilityName": "اليرموك الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.8055726",
+    "facilityLongitude": "46.7631045",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3939",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.22",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2865",
+    "facilityName": "الزهرة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5821967",
+    "facilityLongitude": "46.6381659",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3905",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.24",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1537",
+    "facilityName": "الخالدية",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6198883",
+    "facilityLongitude": "46.7517909",
+    "contactNo1": "966114462436",
+    "fax1": "966114462436",
+    "facilityCd": "923",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.32",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2667",
+    "facilityName": "الجزيرة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.665323",
+    "facilityLongitude": "46.78952",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "3378",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.64",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1838",
+    "facilityName": "منفوحة الجديدة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.59766",
+    "facilityLongitude": "46.72516",
+    "contactNo1": "4593948",
+    "fax1": "114593948",
+    "facilityCd": "1232",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.66",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1686",
+    "facilityName": "النهضة الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7488379",
+    "facilityLongitude": "46.8006875",
+    "contactNo1": "1277000",
+    "fax1": "112275860",
+    "facilityCd": "1077",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "15.94",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1674",
+    "facilityName": "المنصورة بقطاع الوسط",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.61016",
+    "facilityLongitude": "46.75007",
+    "contactNo1": "4467277",
+    "fax1": "114467277",
+    "facilityCd": "1065",
+    "hisEnabledFacility": true,
+    "isOpen": true,
+    "facilityDistance": "16.01",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1110",
+    "facilityName": "مستشفى الإيمان العام",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6004247",
+    "facilityLongitude": "46.7376142",
+    "contactNo1": "966114471900",
+    "fax1": "966114471900",
+    "facilityCd": "32",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "16.09",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "3758",
+    "facilityName": "مجمع طب الاسنان بالمنصورة",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6131727",
+    "facilityLongitude": "46.75824",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "5408",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "16.32",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1300",
+    "facilityName": "العريجا الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5779974",
+    "facilityLongitude": "46.6017436",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "647",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "16.32",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1635",
+    "facilityName": "الفيصلية القطاع الأوسط",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.6438125",
+    "facilityLongitude": "46.7861875",
+    "contactNo1": "4713488",
+    "fax1": "114713488",
+    "facilityCd": "1024",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "16.41",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "187",
+    "facilityName": "مركز طب الأسنان التخصصي بالرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.799696",
+    "facilityLongitude": "46.78713",
+    "contactNo1": "8001277000",
+    "fax1": "112390017",
+    "facilityCd": "3990",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "16.81",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1580",
+    "facilityName": "السويدي الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5685427",
+    "facilityLongitude": "46.629433",
+    "contactNo1": "966114311048",
+    "fax1": "966114311048",
+    "facilityCd": "969",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "16.82",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3673",
+    "facilityName": "الهيئة الطبية العامة بمنطقة الرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.6325509",
+    "facilityLongitude": "46.7839468",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "9889",
+    "hisEnabledFacility": false,
+    "isOpen": false,
+    "facilityDistance": "16.90",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1545",
+    "facilityName": "الخليج 2",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.780887",
+    "facilityLongitude": "46.800655",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "933",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.04",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1495",
+    "facilityName": "اشبيليا",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.79949",
+    "facilityLongitude": "46.78998",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "881",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.05",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2867",
+    "facilityName": "الشفا الأول",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.57202",
+    "facilityLongitude": "46.695352",
+    "contactNo1": "2983596",
+    "fax1": "11234567",
+    "facilityCd": "3907",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.08",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "3143",
+    "facilityName": "مجمع عيادات طب الأسنان بجنوب الرياض",
+    "facilityTypeVO": {
+      "facilityTypeId": "7",
+      "facilityTypeName": "مركز متخصص"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.571424",
+    "facilityLongitude": "46.696117",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "4515",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.16",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1573",
+    "facilityName": "السلام",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.69649",
+    "facilityLongitude": "46.81473",
+    "contactNo1": "1277000",
+    "fax1": "112325800",
+    "facilityCd": "962",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.19",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1682",
+    "facilityName": "النسيم الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.719215",
+    "facilityLongitude": "46.8172503",
+    "contactNo1": "1277000",
+    "fax1": "112312780",
+    "facilityCd": "1073",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.26",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1785",
+    "facilityName": "طويق",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.58218",
+    "facilityLongitude": "46.56043",
+    "contactNo1": "4303097",
+    "fax1": "114303097",
+    "facilityCd": "1178",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "17.53",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "2886",
+    "facilityName": "المونسية",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.827994",
+    "facilityLongitude": "46.786208",
+    "contactNo1": "1277000",
+    "fax1": "112111994",
+    "facilityCd": "3926",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "18.62",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2906",
+    "facilityName": "ظهرة نمار",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5535933",
+    "facilityLongitude": "46.6121149",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3946",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "18.72",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2901",
+    "facilityName": "بدر 2",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.56101",
+    "facilityLongitude": "46.71293",
+    "contactNo1": "4217275",
+    "fax1": null,
+    "facilityCd": "3941",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "18.81",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1589",
+    "facilityName": "الشفاء الثاني",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5516886",
+    "facilityLongitude": "46.6882869",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "978",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "19.08",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1680",
+    "facilityName": "النسيم الشرقي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.749601",
+    "facilityLongitude": "46.832557",
+    "contactNo1": "1277000",
+    "fax1": "112334064",
+    "facilityCd": "1071",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "19.11",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2871",
+    "facilityName": "العزیزیة 2",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.57826",
+    "facilityLongitude": "46.75662",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3911",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "19.21",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1679",
+    "facilityName": "النسيم الجنوبي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.71819",
+    "facilityLongitude": "46.84175",
+    "contactNo1": "1277000",
+    "fax1": "112318885",
+    "facilityCd": "1070",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "19.74",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "2856",
+    "facilityName": " الحزم بالقطاع الجنوبي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.54136",
+    "facilityLongitude": "46.65308",
+    "contactNo1": "114213099",
+    "fax1": "114213099",
+    "facilityCd": "3896",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "19.77",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2893",
+    "facilityName": "النسيم الأوسط",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.735457",
+    "facilityLongitude": "46.842878",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3933",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "19.93",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1576",
+    "facilityName": "السعادة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.6958108",
+    "facilityLongitude": "46.8470637",
+    "contactNo1": "1277000",
+    "fax1": "112413172",
+    "facilityCd": "965",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "20.44",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1786",
+    "facilityName": "طويق الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5623234",
+    "facilityLongitude": "46.5403651",
+    "contactNo1": "2624584",
+    "fax1": null,
+    "facilityCd": "1179",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "20.46",
+    "before_appointment_hours": "90",
+    "after_appointment_hours": "90",
+    "smart_checkin_distance": "1300.0",
+    "smart_checkin_enablement": true,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "الربو",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1722",
+    "facilityName": "بدر الأول",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.53975",
+    "facilityLongitude": "46.69604",
+    "contactNo1": "4217275",
+    "fax1": "114217275",
+    "facilityCd": "1114",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "20.56",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2902",
+    "facilityName": "بدر 3",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.54873",
+    "facilityLongitude": "46.73244",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3942",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "20.84",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1660",
+    "facilityName": "عكاظ",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5303431",
+    "facilityLongitude": "46.664363",
+    "contactNo1": "4201620",
+    "fax1": "114201620",
+    "facilityCd": "1050",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "21.06",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "حساسية",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "2859",
+    "facilityName": "الدار البیضاء 2",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.569092",
+    "facilityLongitude": "46.776505",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3899",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "21.23",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض الكلى",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1313",
+    "facilityName": "مستشفى الامام عبدالرحمن الفيصل",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5279854",
+    "facilityLongitude": "46.6530787",
+    "contactNo1": "2615555",
+    "fax1": "966114234000",
+    "facilityCd": "660",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "21.26",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "الربو",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1293",
+    "facilityName": "الدار البيضاء",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.584812",
+    "facilityLongitude": "46.810553",
+    "contactNo1": "2983598",
+    "fax1": "2983598",
+    "facilityCd": "640",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "22.32",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1102",
+    "facilityName": "مستشفى النقاهة",
+    "facilityTypeVO": {
+      "facilityTypeId": "5",
+      "facilityTypeName": "ثانوي"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.5848394",
+    "facilityLongitude": "46.8106735",
+    "contactNo1": "966114955104",
+    "fax1": "966114955104",
+    "facilityCd": "24",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "22.32",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "3255",
+    "facilityName": "الجنادرية الغربي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.7976123",
+    "facilityLongitude": "46.8518819",
+    "contactNo1": "1277000",
+    "fax1": null,
+    "facilityCd": "4588",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "22.52",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "1519",
+    "facilityName": "الجنادرية الشرقي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.808",
+    "facilityLongitude": "46.86225",
+    "contactNo1": "1277000",
+    "fax1": "112460094",
+    "facilityCd": "905",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "23.95",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض الكلى",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1631",
+    "facilityName": "الفواز",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "21",
+      "directorateName": "تجمع الرياض الصحي الأول",
+      "directorateCd": "21"
+    },
+    "facilityLatitude": "24.500664",
+    "facilityLongitude": "46.626207",
+    "contactNo1": "2714966",
+    "fax1": "112714966",
+    "facilityCd": "1020",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "24.37",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الثانية)",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "ارتفاع ضغط الدم",
+        "risk": "متوسط"
+      }
+    ]
+  },
+  {
+    "facilityId": "2888",
+    "facilityName": "الندوة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.79005",
+    "facilityLongitude": "46.87543",
+    "contactNo1": null,
+    "fax1": null,
+    "facilityCd": "3928",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "24.45",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1615",
+    "facilityName": "العمارية",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.80252",
+    "facilityLongitude": "46.42183",
+    "contactNo1": "4151331",
+    "fax1": "11415133",
+    "facilityCd": "1004",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "24.53",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "أمراض القلب",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع جداً"
+      }
+    ]
+  },
+  {
+    "facilityId": "1683",
+    "facilityName": "النظيم الشمالي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.80876",
+    "facilityLongitude": "46.886433",
+    "contactNo1": "1277000",
+    "fax1": "112450032",
+    "facilityCd": "1074",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "26.22",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "مرتفع جداً"
+      },
+      {
+        "disease": "حساسية",
+        "risk": "مرتفع"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "مرتفع"
+      }
+    ]
+  },
+  {
+    "facilityId": "1684",
+    "facilityName": "النظيم الجنوبي",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "22",
+      "directorateName": "تجمع الرياض الصحي الثاني",
+      "directorateCd": "22"
+    },
+    "facilityLatitude": "24.79696",
+    "facilityLongitude": "46.89932",
+    "contactNo1": "1277000",
+    "fax1": "112460405",
+    "facilityCd": "1075",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "26.98",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1618",
+    "facilityName": "العيينة",
+    "facilityTypeVO": {
+      "facilityTypeId": "4",
+      "facilityTypeName": "مراكز استشارية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.90528",
+    "facilityLongitude": "46.38905",
+    "contactNo1": "5280238",
+    "fax1": "11528023",
+    "facilityCd": "1007",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "33.25",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "الربو",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "أمراض القلب",
+        "risk": "متوسط"
+      },
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "منخفض"
+      }
+    ]
+  },
+  {
+    "facilityId": "1812",
+    "facilityName": "قصور المقبل",
+    "facilityTypeVO": {
+      "facilityTypeId": "3",
+      "facilityTypeName": "مركز رعاية صحية"
+    },
+    "directorateVO": {
+      "id": "16",
+      "directorateName": "تجمع الرياض الصحي الثالث",
+      "directorateCd": "11"
+    },
+    "facilityLatitude": "24.50503",
+    "facilityLongitude": "46.37247",
+    "contactNo1": "966115233248",
+    "fax1": "966115233248",
+    "facilityCd": "1206",
+    "hisEnabledFacility": true,
+    "isOpen": false,
+    "facilityDistance": "36.53",
+    "before_appointment_hours": null,
+    "after_appointment_hours": null,
+    "smart_checkin_distance": null,
+    "smart_checkin_enablement": false,
+    "showPhysicianDetails": "YES",
+    "showPhysicianRating": false,
+    "showFacilityRating": false,
+    "facilityRatingVo": null,
+    "healthConditions": [
+      {
+        "disease": "سكري (الدرجة الأولى)",
+        "risk": "متوسط"
+      }
+    ]
+  }
+]

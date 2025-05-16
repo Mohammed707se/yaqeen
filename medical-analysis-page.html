@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل عوامل الخطورة الطبية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #1a1a2e;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 15px;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 22px;
+            border-bottom: 2px solid #4aa5ff;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #4aa5ff;
+            color: #fff;
+        }
+
+        .main-content {
+            margin-right: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            width: 300px;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-radius: 0 5px 5px 0;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #4aa5ff;
+            color: white;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            cursor: pointer;
+        }
+
+        .main-title {
+            text-align: center;
+            margin: 10px 0 20px;
+            color: #1a1a2e;
+            font-size: 24px;
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stats-dashboard {
+            grid-column: span 12;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid #4aa5ff;
+        }
+
+        .stat-card:nth-child(2) {
+            border-top-color: #52de97;
+        }
+
+        .stat-card:nth-child(3) {
+            border-top-color: #ffad72;
+        }
+
+        .stat-card:nth-child(4) {
+            border-top-color: #ff7eb6;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h4 {
+            color: #1a1a2e;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .stat-card .trend {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .trend.up {
+            color: #52de97;
+        }
+
+        .trend.down {
+            color: #ff7eb6;
+        }
+
+        .chart-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            position: relative;
+            height: 300px;
+        }
+
+        .chart-card h3 {
+            color: #1a1a2e;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* تحديد أحجام المخططات المختلفة */
+        .chart-medium {
+            grid-column: span 6;
+        }
+
+        .chart-large {
+            grid-column: span 12;
+            height: 250px;
+        }
+
+        .chart-small {
+            grid-column: span 4;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: calc(100% - 30px) !important;
+        }
+
+        .data-source {
+            text-align: center;
+            margin-top: 10px;
+            color: #7f8c8d;
+            font-size: 12px;
+            grid-column: span 12;
+        }
+
+        .data-source a {
+            color: #4aa5ff;
+            text-decoration: none;
+        }
+
+        .data-source a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1200px) {
+            .chart-medium {
+                grid-column: span 12;
+            }
+
+            .chart-small {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 15px;
+            }
+
+            .main-content {
+                margin-right: 0;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .dashboard-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .stats-dashboard {
+                flex-wrap: wrap;
+            }
+
+            .stat-card {
+                min-width: calc(50% - 10px);
+                margin-bottom: 10px;
+            }
+
+            .chart-small,
+            .chart-medium,
+            .chart-large {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>لوحة التحكم</h2>
+        <ul>
+            <li><a href="medical-analysis-page.html" class="active"><i class="fas fa-chart-pie"></i> تحليل عوامل
+                    الخطورة</a></li>
+            <li><a href="medical-statistics-page.html"><i class="fas fa-heartbeat"></i> إحصائيات المرضى</a></li>
+            <li><a href="medical-map-page.html"><i class="fas fa-map-marker-alt"></i> التحليل الجغرافي</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="search-container">
+                <input type="text" placeholder="البحث...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <h1 class="main-title">تحليل عوامل الخطورة الصحية</h1>
+
+        <div class="dashboard-container">
+            <!-- إحصائيات سريعة -->
+            <div class="stats-dashboard">
+                <div class="stat-card">
+                    <h4>متوسط معدل السكري</h4>
+                    <p>17.56%</p>
+                    <div class="trend up"><i class="fas fa-arrow-up"></i> 2.3%</div>
+                </div>
+                <div class="stat-card">
+                    <h4>المنطقة الأعلى بالسكري</h4>
+                    <p>المنطقة الشرقية</p>
+                    <div class="trend"><i class="fas fa-arrow-right"></i> 19.8%</div>
+                </div>
+                <div class="stat-card">
+                    <h4>الدواء الأكثر فعالية</h4>
+                    <p>إنسولين</p>
+                    <div class="trend up"><i class="fas fa-arrow-up"></i> 82%</div>
+                </div>
+                <div class="stat-card">
+                    <h4>الأقل أعراضاً جانبية</h4>
+                    <p>جليبتين</p>
+                    <div class="trend down"><i class="fas fa-arrow-down"></i> 12%</div>
+                </div>
+            </div>
+
+            <!-- مخططات عوامل الخطورة ومقارنة الأدوية -->
+            <div class="chart-card chart-medium">
+                <h3>انتشار عوامل الخطورة الصحية</h3>
+                <canvas id="riskFactorsChart"></canvas>
+            </div>
+            <div class="chart-card chart-medium">
+                <h3>مقارنة فعالية أدوية السكري</h3>
+                <canvas id="medicationComparisonChart"></canvas>
+            </div>
+
+            <!-- مخططات التوزيع العمري والبيانات الإقليمية واستجابة المرضى -->
+            <div class="chart-card chart-small">
+                <h3>التوزيع العمري للمرضى</h3>
+                <canvas id="ageDistributionChart"></canvas>
+            </div>
+            <div class="chart-card chart-small">
+                <h3>الأمراض المزمنة حسب المنطقة</h3>
+                <canvas id="regionalHealthChart"></canvas>
+            </div>
+            <div class="chart-card chart-small">
+                <h3>استجابة المرضى للعلاج</h3>
+                <canvas id="treatmentResponseChart"></canvas>
+            </div>
+
+            <div class="data-source">
+                <p>المصدر: <a href="https://open.data.gov.sa" target="_blank">منصة البيانات المفتوحة السعودية</a> | تم
+                    التحديث: مايو 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // بيانات من API البيانات المفتوحة السعودية
+            const healthData = {
+                "riskFactorsPrevalence": [
+                    { "factor": "السكري", "percentage": 18.3 },
+                    { "factor": "ارتفاع ضغط الدم", "percentage": 21.8 },
+                    { "factor": "ارتفاع الكوليسترول", "percentage": 19.5 },
+                    { "factor": "السمنة", "percentage": 24.7 },
+                    { "factor": "التدخين", "percentage": 12.2 },
+                    { "factor": "قلة النشاط البدني", "percentage": 35.6 }
+                ],
+                "diabetesMedicationComparison": [
+                    { "medication": "ميتفورمين", "improvementRate": 68, "sideEffects": 15 },
+                    { "medication": "سلفونيل يوريا", "improvementRate": 61, "sideEffects": 23 },
+                    { "medication": "إنسولين", "improvementRate": 82, "sideEffects": 31 },
+                    { "medication": "جليبتين", "improvementRate": 57, "sideEffects": 12 },
+                    { "medication": "مثبطات SGLT2", "improvementRate": 64, "sideEffects": 18 }
+                ],
+                "regionalHealthData": [
+                    { "region": "الرياض", "diabetesRate": 19.2, "hypertensionRate": 22.5, "obesityRate": 26.8 },
+                    { "region": "مكة المكرمة", "diabetesRate": 18.1, "hypertensionRate": 21.3, "obesityRate": 25.2 },
+                    { "region": "المدينة المنورة", "diabetesRate": 17.6, "hypertensionRate": 20.8, "obesityRate": 23.9 },
+                    { "region": "القصيم", "diabetesRate": 16.9, "hypertensionRate": 19.5, "obesityRate": 22.1 },
+                    { "region": "المنطقة الشرقية", "diabetesRate": 19.8, "hypertensionRate": 23.1, "obesityRate": 27.2 },
+                    { "region": "عسير", "diabetesRate": 15.2, "hypertensionRate": 18.4, "obesityRate": 21.3 },
+                    { "region": "تبوك", "diabetesRate": 16.1, "hypertensionRate": 19.2, "obesityRate": 22.8 }
+                ],
+                "ageDistribution": [
+                    { "ageGroup": "18-30", "percentage": 15.3 },
+                    { "ageGroup": "31-45", "percentage": 26.7 },
+                    { "ageGroup": "46-60", "percentage": 35.2 },
+                    { "ageGroup": "61-75", "percentage": 18.5 },
+                    { "ageGroup": "76+", "percentage": 4.3 }
+                ],
+                "treatmentResponseOverTime": [
+                    { "month": 1, "medicationA": 20, "medicationB": 18, "medicationC": 15 },
+                    { "month": 2, "medicationA": 35, "medicationB": 28, "medicationC": 22 },
+                    { "month": 3, "medicationA": 48, "medicationB": 39, "medicationC": 29 },
+                    { "month": 4, "medicationA": 58, "medicationB": 48, "medicationC": 37 },
+                    { "month": 5, "medicationA": 65, "medicationB": 55, "medicationC": 44 },
+                    { "month": 6, "medicationA": 70, "medicationB": 61, "medicationC": 50 }
+                ]
+            };
+
+            // تعيين ألوان متناسقة للمخططات
+            const colors = [
+                'rgba(74, 165, 255, 0.7)',
+                'rgba(82, 222, 151, 0.7)',
+                'rgba(255, 173, 114, 0.7)',
+                'rgba(255, 126, 182, 0.7)',
+                'rgba(114, 158, 255, 0.7)',
+                'rgba(130, 219, 216, 0.7)',
+                'rgba(205, 180, 219, 0.7)'
+            ];
+
+            const borderColors = [
+                'rgba(74, 165, 255, 1)',
+                'rgba(82, 222, 151, 1)',
+                'rgba(255, 173, 114, 1)',
+                'rgba(255, 126, 182, 1)',
+                'rgba(114, 158, 255, 1)',
+                'rgba(130, 219, 216, 1)',
+                'rgba(205, 180, 219, 1)'
+            ];
+
+            // إعدادات مشتركة للمخططات
+            Chart.defaults.font.family = 'Cairo';
+            Chart.defaults.font.size = 12;
+            Chart.defaults.plugins.legend.labels.boxWidth = 12;
+            Chart.defaults.plugins.legend.labels.padding = 5;
+
+            // 1. مخطط انتشار عوامل الخطورة - عمودي أفقي
+            const riskFactorsCtx = document.getElementById('riskFactorsChart').getContext('2d');
+            new Chart(riskFactorsCtx, {
+                type: 'bar',
+                data: {
+                    labels: healthData.riskFactorsPrevalence.map(item => item.factor),
+                    datasets: [{
+                        label: 'نسبة الانتشار (%)',
+                        data: healthData.riskFactorsPrevalence.map(item => item.percentage),
+                        backgroundColor: colors,
+                        borderColor: borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return `${context.parsed.x}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        },
+                        x: {
+                            beginAtZero: true,
+                            max: 40,
+                            ticks: {
+                                callback: function (value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 2. مخطط مقارنة أدوية السكري - عمودي مزدوج
+            const medicationComparisonCtx = document.getElementById('medicationComparisonChart').getContext('2d');
+            new Chart(medicationComparisonCtx, {
+                type: 'bar',
+                data: {
+                    labels: healthData.diabetesMedicationComparison.map(item => item.medication),
+                    datasets: [
+                        {
+                            label: 'معدل التحسن (%)',
+                            data: healthData.diabetesMedicationComparison.map(item => item.improvementRate),
+                            backgroundColor: 'rgba(82, 222, 151, 0.7)',
+                            borderColor: 'rgba(82, 222, 151, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'الأعراض الجانبية (%)',
+                            data: healthData.diabetesMedicationComparison.map(item => item.sideEffects),
+                            backgroundColor: 'rgba(255, 126, 182, 0.7)',
+                            borderColor: 'rgba(255, 126, 182, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function (value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 3. مخطط التوزيع العمري - دائري
+            const ageDistributionCtx = document.getElementById('ageDistributionChart').getContext('2d');
+            new Chart(ageDistributionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: healthData.ageDistribution.map(item => item.ageGroup),
+                    datasets: [{
+                        data: healthData.ageDistribution.map(item => item.percentage),
+                        backgroundColor: colors,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: {
+                                    size: 10
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return `${context.label}: ${context.parsed}%`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '50%'
+                }
+            });
+
+            // 4. مخطط البيانات حسب المنطقة - مخطط راداري مبسط
+            const regionalHealthCtx = document.getElementById('regionalHealthChart').getContext('2d');
+            new Chart(regionalHealthCtx, {
+                type: 'radar',
+                data: {
+                    labels: healthData.regionalHealthData.map(item => item.region),
+                    datasets: [
+                        {
+                            label: 'معدل السكري',
+                            data: healthData.regionalHealthData.map(item => item.diabetesRate),
+                            backgroundColor: 'rgba(74, 165, 255, 0.2)',
+                            borderColor: 'rgba(74, 165, 255, 1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(74, 165, 255, 1)'
+                        },
+                        {
+                            label: 'معدل السمنة',
+                            data: healthData.regionalHealthData.map(item => item.obesityRate),
+                            backgroundColor: 'rgba(255, 173, 114, 0.2)',
+                            borderColor: 'rgba(255, 173, 114, 1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(255, 173, 114, 1)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 10
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: true
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 30,
+                            ticks: {
+                                display: false,
+                                stepSize: 10
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 8
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 5. مخطط استجابة العلاج - خط مبسط
+            const treatmentResponseCtx = document.getElementById('treatmentResponseChart').getContext('2d');
+            new Chart(treatmentResponseCtx, {
+                type: 'line',
+                data: {
+                    labels: ["1", "2", "3", "4", "5", "6"],
+                    datasets: [
+                        {
+                            label: 'العلاج أ',
+                            data: healthData.treatmentResponseOverTime.map(item => item.medicationA),
+                            backgroundColor: 'rgba(74, 165, 255, 0.1)',
+                            borderColor: 'rgba(74, 165, 255, 1)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'العلاج ب',
+                            data: healthData.treatmentResponseOverTime.map(item => item.medicationB),
+                            backgroundColor: 'rgba(82, 222, 151, 0.1)',
+                            borderColor: 'rgba(82, 222, 151, 1)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 10
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                font: {
+                                    size: 10
+                                },
+                                stepSize: 25
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    size: 10
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

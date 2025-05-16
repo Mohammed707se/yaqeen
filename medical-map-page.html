@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة المنشآت الصحية</title>
+
+    <!-- Load Google Maps API only once, and with async -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1G_F7siuGQjegp969RHoSjvKo0_wZZfs&callback=initMap"
+        async defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #1a1a2e;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 15px;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 22px;
+            border-bottom: 2px solid #4aa5ff;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #4aa5ff;
+            color: #fff;
+        }
+
+        .main-content {
+            margin-right: 250px;
+            width: calc(100% - 250px);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            z-index: 100;
+        }
+
+        .header h1 {
+            color: #1a1a2e;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .map-container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-controls {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-control {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .filter-control label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .filter-control select {
+            padding: 8px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 14px;
+            min-width: 180px;
+        }
+
+        #map {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .facility-popup {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .facility-popup h3 {
+            color: #1a1a2e;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        .facility-popup p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .facility-popup .facility-type {
+            color: #4aa5ff;
+            font-weight: 600;
+        }
+
+        .facility-popup .health-conditions {
+            margin-top: 10px;
+        }
+
+        .facility-popup .condition {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+
+        .facility-popup .disease {
+            font-weight: 600;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .risk-low {
+            background-color: #e3f8e3;
+            color: #15803d;
+        }
+
+        .risk-medium {
+            background-color: #fff7e3;
+            color: #b45309;
+        }
+
+        .risk-high {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .risk-very-high {
+            background-color: #7f1d1d;
+            color: white;
+        }
+
+        .marker-cluster {
+            background-color: rgba(74, 165, 255, 0.7);
+            border-radius: 50%;
+            width: 30px !important;
+            height: 30px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border: 2px solid rgba(74, 165, 255, 1);
+        }
+
+        .legend {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+
+        .legend-text {
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 15px;
+            }
+
+            .main-content {
+                margin-right: 0;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .filter-controls {
+                flex-direction: column;
+            }
+
+            .filter-control {
+                width: 100%;
+            }
+        }
+
+        .territory-popup {
+            direction: rtl;
+            text-align: right;
+            min-width: 250px;
+        }
+
+        .territory-popup h3 {
+            color: #1a1a2e;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        .territory-popup p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .nearby-facilities {
+            margin-top: 10px;
+        }
+
+        .nearby-facilities ul {
+            margin: 5px 20px;
+            padding: 0;
+        }
+
+        .nearby-facilities li {
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        .territory-stats {
+            margin-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 10px;
+        }
+
+        .risk-distribution {
+            margin-top: 10px;
+        }
+
+        .risk-bars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .risk-bar-item {
+            margin-bottom: 5px;
+        }
+
+
+        .map-toggle-button:hover {
+            background-color: #f4f4f4;
+        }
+
+        .map-toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: white;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            padding: 8px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            color: #1a1a2e;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 80px;
+            min-height: 70px;
+            text-align: center;
+        }
+
+        .map-toggle-button:hover {
+            background-color: #f4f4f4;
+        }
+
+        .map-toggle-button i {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .toggle-text {
+            line-height: 1.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>لوحة التحكم</h2>
+        <ul>
+            <li><a href="medical-analysis-page.html"><i class="fas fa-chart-pie"></i> تحليل عوامل الخطورة</a></li>
+            <li><a href="medical-statistics-page.html"><i class="fas fa-heartbeat"></i> إحصائيات المرضى</a></li>
+            <li><a href="medical-map-page.html" class="active"><i class="fas fa-map-marker-alt"></i> التحليل
+                    الجغرافي</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>خريطة المنشآت الصحية</h1>
+        </div>
+
+        <div class="map-container">
+            <div class="filter-controls">
+                <div class="filter-control">
+                    <label for="facilityType">نوع المنشأة</label>
+                    <select id="facilityType">
+                        <option value="all">جميع المنشآت</option>
+                        <option value="3">مركز رعاية صحية</option>
+                        <option value="4">مراكز استشارية</option>
+                        <option value="5">ثانوي</option>
+                        <option value="7">مركز متخصص</option>
+                    </select>
+                </div>
+                <div class="filter-control">
+                    <label for="healthCondition">الحالة الصحية</label>
+                    <select id="healthCondition">
+                        <option value="all">جميع الحالات</option>
+                        <option value="سكري (الدرجة الأولى)">سكري (الدرجة الأولى)</option>
+                        <option value="سكري (الدرجة الثانية)">سكري (الدرجة الثانية)</option>
+                        <option value="الربو">الربو</option>
+                        <option value="أمراض القلب">أمراض القلب</option>
+                        <option value="أمراض الكلى">أمراض الكلى</option>
+                        <option value="حساسية">حساسية</option>
+                        <option value="ارتفاع ضغط الدم">ارتفاع ضغط الدم</option>
+                    </select>
+                </div>
+                <div class="filter-control">
+                    <label for="riskLevel">مستوى الخطورة</label>
+                    <select id="riskLevel">
+                        <option value="all">جميع المستويات</option>
+                        <option value="منخفض">منخفض</option>
+                        <option value="متوسط">متوسط</option>
+                        <option value="مرتفع">مرتفع</option>
+                        <option value="مرتفع جداً">مرتفع جداً</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script>
+        // Define initMap in the global scope so the Google Maps API can find it
+        let map;
+        let markers = [];
+        let territoriesLayer = [];
+        let diseaseTerritoriesData = {};
+        let facilitiesData = [];
+        let infoWindow;
+        let territoriesVisible = true;
+
+        function initMap() {
+            // إنشاء خريطة Google Maps
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 24.72, lng: 46.65 },
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: true,
+                fullscreenControl: true,
+                streetViewControl: false
+            });
+
+            // إنشاء نافذة معلومات واحدة للاستخدام المتكرر
+            infoWindow = new google.maps.InfoWindow();
+
+            // إضافة زر التبديل للمناطق
+            const toggleTerritoriesDiv = document.createElement('div');
+            toggleTerritoriesDiv.className = 'map-toggle-button';
+            toggleTerritoriesDiv.innerHTML = '<i class="fas fa-layer-group"></i><div class="toggle-text">إظهار/إخفاء مناطق الانتشار</div>';
+            toggleTerritoriesDiv.id = 'toggleTerritories';
+
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleTerritoriesDiv);
+
+            // إضافة وسيلة إيضاح للخريطة
+            addLegend();
+
+            // محاولة جلب بيانات المنشآت من ملف JSON خارجي
+            fetch('facilities.json')
+                .then(response => response.json())
+                .then(data => {
+                    facilitiesData = data;
+                    displayFacilities(data);
+                    populateFilters(data);
+                })
+                .catch(error => {
+                    console.error('خطأ في تحميل بيانات المنشآت:', error);
+                    // في حالة حدوث خطأ، استخدم البيانات المضمنة (الافتراضية)
+                    useDummyData();
+                });
+
+            // إضافة مستمع الحدث لزر التبديل
+            document.getElementById('toggleTerritories').addEventListener('click', toggleTerritories);
+        }
+
+        function addLegend() {
+            const legendDiv = document.createElement('div');
+            legendDiv.className = 'legend';
+            legendDiv.style.direction = 'rtl';
+            legendDiv.innerHTML = `
+                <h4>أنواع المنشآت</h4>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #2882E3;"></div>
+                    <div class="legend-text">مركز رعاية صحية</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #0054E3;"></div>
+                    <div class="legend-text">مراكز استشارية</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #28A844;"></div>
+                    <div class="legend-text">ثانوي</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #DC3545;"></div>
+                    <div class="legend-text">مركز متخصص</div>
+                </div>
+                <h4 style="margin-top: 10px;">مستويات الخطورة</h4>
+                <div class="legend-item">
+                    <span class="risk-badge risk-low" style="margin-left: 5px;">منخفض</span>
+                    <span class="risk-badge risk-medium" style="margin-left: 5px;">متوسط</span>
+                </div>
+                <div class="legend-item">
+                    <span class="risk-badge risk-high" style="margin-left: 5px;">مرتفع</span>
+                    <span class="risk-badge risk-very-high">مرتفع جداً</span>
+                </div>
+            `;
+
+            const legendControl = document.createElement('div');
+            legendControl.className = 'map-legend-container';
+            legendControl.appendChild(legendDiv);
+
+            map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(legendControl);
+        }
+
+        // الدالة لتحديد لون مستوى الخطورة
+        function getRiskClass(risk) {
+            switch (risk) {
+                case 'منخفض':
+                    return 'risk-low';
+                case 'متوسط':
+                    return 'risk-medium';
+                case 'مرتفع':
+                    return 'risk-high';
+                case 'مرتفع جداً':
+                    return 'risk-very-high';
+                default:
+                    return 'risk-medium';
+            }
+        }
+
+        // الدالة لإنشاء محتوى النافذة المنبثقة
+        function createPopupContent(facility) {
+            let content = `
+                <div class="facility-popup">
+                    <h3>${facility.facilityName}</h3>
+                    <p class="facility-type">${facility.facilityTypeVO.facilityTypeName}</p>
+                    <p>الإدارة: ${facility.directorateVO.directorateName}</p>
+                    <p>رقم الاتصال: ${facility.contactNo1 || 'غير متوفر'}</p>
+            `;
+
+            if (facility.healthConditions && facility.healthConditions.length > 0) {
+                content += '<div class="health-conditions"><p><strong>الحالات الصحية:</strong></p>';
+
+                facility.healthConditions.forEach(condition => {
+                    content += `
+                        <div class="condition">
+                            <span class="disease">${condition.disease}</span>
+                            <span class="risk-badge ${getRiskClass(condition.risk)}">${condition.risk}</span>
+                        </div>
+                    `;
+                });
+
+                content += '</div>';
+            }
+
+            content += '</div>';
+            return content;
+        }
+
+        // استخدام البيانات المضمنة
+        function useDummyData() {
+            const dummyData = [
+                {
+                    "facilityId": "2878",
+                    "facilityName": "المحمدية 2",
+                    "facilityTypeVO": {
+                        "facilityTypeId": "3",
+                        "facilityTypeName": "مركز رعاية صحية"
+                    },
+                    "directorateVO": {
+                        "id": "16",
+                        "directorateName": "تجمع الرياض الصحي الثالث",
+                        "directorateCd": "11"
+                    },
+                    "facilityLatitude": "24.72781",
+                    "facilityLongitude": "46.64655",
+                    "contactNo1": "4978037",
+                    "healthConditions": [
+                        {
+                            "disease": "حساسية",
+                            "risk": "متوسط"
+                        },
+                        {
+                            "disease": "سكري (الدرجة الثانية)",
+                            "risk": "متوسط"
+                        },
+                        {
+                            "disease": "أمراض الكلى",
+                            "risk": "مرتفع جداً"
+                        }
+                    ]
+                },
+                {
+                    "facilityId": "1295",
+                    "facilityName": "الأمير محمد بن سعود الكبير( الرائد )",
+                    "facilityTypeVO": {
+                        "facilityTypeId": "4",
+                        "facilityTypeName": "مراكز استشارية"
+                    },
+                    "directorateVO": {
+                        "id": "16",
+                        "directorateName": "تجمع الرياض الصحي الثالث",
+                        "directorateCd": "11"
+                    },
+                    "facilityLatitude": "24.70908",
+                    "facilityLongitude": "46.6343",
+                    "contactNo1": "8001277",
+                    "healthConditions": [
+                        {
+                            "disease": "الربو",
+                            "risk": "منخفض"
+                        }
+                    ]
+                },
+                {
+                    "facilityId": "2879",
+                    "facilityName": "مركز صحي النهضة",
+                    "facilityTypeVO": {
+                        "facilityTypeId": "3",
+                        "facilityTypeName": "مركز رعاية صحية"
+                    },
+                    "directorateVO": {
+                        "id": "16",
+                        "directorateName": "تجمع الرياض الصحي الثالث",
+                        "directorateCd": "11"
+                    },
+                    "facilityLatitude": "24.73781",
+                    "facilityLongitude": "46.66655",
+                    "contactNo1": "4978123",
+                    "healthConditions": [
+                        {
+                            "disease": "سكري (الدرجة الأولى)",
+                            "risk": "منخفض"
+                        },
+                        {
+                            "disease": "أمراض القلب",
+                            "risk": "مرتفع"
+                        }
+                    ]
+                },
+                {
+                    "facilityId": "1296",
+                    "facilityName": "مستشفى الملك فهد التخصصي",
+                    "facilityTypeVO": {
+                        "facilityTypeId": "7",
+                        "facilityTypeName": "مركز متخصص"
+                    },
+                    "directorateVO": {
+                        "id": "16",
+                        "directorateName": "تجمع الرياض الصحي الثالث",
+                        "directorateCd": "11"
+                    },
+                    "facilityLatitude": "24.71908",
+                    "facilityLongitude": "46.6543",
+                    "contactNo1": "8002345",
+                    "healthConditions": [
+                        {
+                            "disease": "أمراض القلب",
+                            "risk": "مرتفع جداً"
+                        },
+                        {
+                            "disease": "أمراض الكلى",
+                            "risk": "مرتفع"
+                        }
+                    ]
+                },
+                {
+                    "facilityId": "2880",
+                    "facilityName": "المركز الصحي الثانوي",
+                    "facilityTypeVO": {
+                        "facilityTypeId": "5",
+                        "facilityTypeName": "ثانوي"
+                    },
+                    "directorateVO": {
+                        "id": "16",
+                        "directorateName": "تجمع الرياض الصحي الثالث",
+                        "directorateCd": "11"
+                    },
+                    "facilityLatitude": "24.74781",
+                    "facilityLongitude": "46.63655",
+                    "contactNo1": "4978567",
+                    "healthConditions": [
+                        {
+                            "disease": "ارتفاع ضغط الدم",
+                            "risk": "متوسط"
+                        }
+                    ]
+                }
+            ];
+
+            facilitiesData = dummyData;
+            displayFacilities(dummyData);
+            populateFilters(dummyData);
+        }
+
+        // عرض المنشآت على الخريطة
+        function displayFacilities(facilities) {
+            // إزالة العلامات الحالية
+            clearMarkers();
+
+            // حدود لضبط الخريطة
+            const bounds = new google.maps.LatLngBounds();
+
+            facilities.forEach(facility => {
+                const lat = parseFloat(facility.facilityLatitude);
+                const lng = parseFloat(facility.facilityLongitude);
+
+                if (!isNaN(lat) && !isNaN(lng)) {
+                    // تحديد لون العلامة حسب نوع المنشأة
+                    let iconColor;
+                    switch (facility.facilityTypeVO.facilityTypeId) {
+                        case '3': // مركز رعاية صحية
+                            iconColor = '#2882E3';
+                            break;
+                        case '4': // مراكز استشارية
+                            iconColor = '#0054E3';
+                            break;
+                        case '5': // ثانوي
+                            iconColor = '#28A844';
+                            break;
+                        case '7': // مركز متخصص
+                            iconColor = '#DC3545';
+                            break;
+                        default:
+                            iconColor = '#2882E3';
+                    }
+
+                    // إنشاء أيقونة مخصصة باستخدام SVG
+                    const svgMarker = {
+                        path: 'M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z',
+                        fillColor: iconColor,
+                        fillOpacity: 1,
+                        strokeColor: '#ffffff',
+                        strokeWeight: 2,
+                        scale: 1.5,
+                        anchor: new google.maps.Point(12, 22),
+                    };
+
+                    // إنشاء علامة للمنشأة
+                    const marker = new google.maps.Marker({
+                        position: { lat, lng },
+                        map: map,
+                        icon: svgMarker,
+                        title: facility.facilityName
+                    });
+
+                    // إضافة حدث النقر لفتح النافذة المنبثقة
+                    marker.addListener('click', () => {
+                        infoWindow.setContent(createPopupContent(facility));
+                        infoWindow.open(map, marker);
+                    });
+
+                    // إضافة العلامة إلى المصفوفة
+                    markers.push(marker);
+
+                    // توسيع الحدود لتشمل هذه النقطة
+                    bounds.extend({ lat, lng });
+                }
+            });
+
+            // ضبط حدود الخريطة لتتضمن جميع العلامات
+            if (markers.length > 0) {
+                map.fitBounds(bounds);
+            }
+
+            // إنشاء طبقة المناطق الجغرافية للأمراض
+            createDiseaseTerritoriesLayer(facilities);
+        }
+
+        function clearMarkers() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+        }
+
+        // تجهيز قوائم الفلترة
+        function populateFilters(facilities) {
+            // جلب الحالات الصحية الفريدة لقائمة الفلترة
+            const healthConditions = new Set();
+            facilities.forEach(facility => {
+                if (facility.healthConditions) {
+                    facility.healthConditions.forEach(condition => {
+                        healthConditions.add(condition.disease);
+                    });
+                }
+            });
+
+            // إضافة الحالات الصحية لقائمة الفلترة
+            const healthConditionSelect = document.getElementById('healthCondition');
+            // حذف الخيارات السابقة
+            while (healthConditionSelect.options.length > 1) {
+                healthConditionSelect.remove(1);
+            }
+
+            // إضافة الخيارات الجديدة
+            healthConditions.forEach(condition => {
+                const option = document.createElement('option');
+                option.value = condition;
+                option.textContent = condition;
+                healthConditionSelect.appendChild(option);
+            });
+        }
+
+        // إنشاء طبقة المناطق الجغرافية للأمراض
+        function createDiseaseTerritoriesLayer(facilities) {
+            // مسح الطبقات السابقة
+            territoriesLayer.forEach(circle => circle.setMap(null));
+            territoriesLayer = [];
+
+            // تنظيم البيانات حسب الأمراض ومستوى الخطورة
+            diseaseTerritoriesData = {};
+
+            facilities.forEach(facility => {
+                if (facility.healthConditions && facility.healthConditions.length > 0) {
+                    const lat = parseFloat(facility.facilityLatitude);
+                    const lng = parseFloat(facility.facilityLongitude);
+
+                    if (!isNaN(lat) && !isNaN(lng)) {
+                        facility.healthConditions.forEach(condition => {
+                            // التركيز على الأمراض ذات الخطورة المرتفعة أو المرتفعة جداً
+                            if (condition.risk === 'مرتفع' || condition.risk === 'مرتفع جداً') {
+                                if (!diseaseTerritoriesData[condition.disease]) {
+                                    diseaseTerritoriesData[condition.disease] = {
+                                        coordinates: [],
+                                        facilities: [],
+                                        risks: []
+                                    };
+                                }
+
+                                diseaseTerritoriesData[condition.disease].coordinates.push([lat, lng]);
+                                diseaseTerritoriesData[condition.disease].facilities.push(facility);
+                                diseaseTerritoriesData[condition.disease].risks.push(condition.risk);
+                            }
+                        });
+                    }
+                }
+            });
+
+            // إنشاء المناطق الجغرافية (territories) للأمراض عالية الخطورة
+            Object.keys(diseaseTerritoriesData).forEach(disease => {
+                const data = diseaseTerritoriesData[disease];
+
+                // التأكد من وجود منشأتين على الأقل للمرض
+                if (data.coordinates.length >= 1) {
+                    // نحسب مركز النقاط لإنشاء دائرة حول كل منشأة
+                    const centerLat = data.coordinates.reduce((sum, p) => sum + p[0], 0) / data.coordinates.length;
+                    const centerLng = data.coordinates.reduce((sum, p) => sum + p[1], 0) / data.coordinates.length;
+
+                    // إنشاء الدوائر لكل منشأة
+                    for (let i = 0; i < data.coordinates.length; i++) {
+                        // نضبط نصف القطر حسب المسافة من المركز (بين 500 متر و 1500 متر)
+                        const distance = getDistanceFromLatLonInKm(data.coordinates[i][0], data.coordinates[i][1], centerLat, centerLng);
+                        const radius = Math.max(500, Math.min(1500, 1000 * (distance + 0.5)));
+
+                        // تحديد لون المنطقة حسب مستوى الخطورة
+                        let fillColor = '#FFA500'; // مرتفع
+                        if (data.risks[i] === 'مرتفع جداً') {
+                            fillColor = '#FF0000'; // مرتفع جداً
+                        }
+
+                        const circle = new google.maps.Circle({
+                            strokeColor: fillColor,
+                            strokeOpacity: 0.8,
+                            strokeWeight: 1,
+                            fillColor: fillColor,
+                            fillOpacity: 0.2,
+                            map: territoriesVisible ? map : null,
+                            center: { lat: data.coordinates[i][0], lng: data.coordinates[i][1] },
+                            radius: radius // بالأمتار
+                        });
+
+                        // إضافة حدث النقر لفتح النافذة المنبثقة
+                        circle.addListener('click', () => {
+                            const popupContent = createTerritoryPopupContent(disease, data.facilities[i], data.risks[i]);
+                            infoWindow.setContent(popupContent);
+                            infoWindow.setPosition({ lat: data.coordinates[i][0], lng: data.coordinates[i][1] });
+                            infoWindow.open(map);
+                        });
+
+                        territoriesLayer.push(circle);
+                    }
+                }
+            });
+        }
+
+        // دالة لحساب المسافة بين نقطتين جغرافيتين
+        function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+            const R = 6371; // نصف قطر الأرض بالكيلومتر
+            const dLat = deg2rad(lat2 - lat1);
+            const dLon = deg2rad(lon2 - lon1);
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            const d = R * c; // المسافة بالكيلومتر
+            return d;
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+
+        // دالة لإنشاء محتوى النافذة المنبثقة للمنطقة
+        function createTerritoryPopupContent(disease, facility, risk) {
+            // نبحث عن المنشآت القريبة التي تعالج نفس المرض
+            const nearbyCenters = findNearbyFacilitiesForDisease(facility, disease, 5); // 5 كيلومتر
+
+            let content = `
+                <div class="territory-popup">
+                    <h3>منطقة انتشار مرض: ${disease}</h3>
+                    <p>مستوى الخطورة: <span class="risk-badge ${getRiskClass(risk)}">${risk}</span></p>
+                    <p>المنشأة المرجعية: ${facility.facilityName}</p>
+            `;
+
+            if (nearbyCenters.length > 0) {
+                content += `<div class="nearby-facilities">
+                    <p><strong>مراكز صحية قريبة تعالج نفس المرض:</strong></p>
+                    <ul>`;
+
+                nearbyCenters.forEach(center => {
+                    content += `<li>${center.facilityName} (${center.facilityTypeVO.facilityTypeName}) - على بعد ${center.distance.toFixed(2)} كم</li>`;
+                });
+
+                content += `</ul></div>`;
+            }
+
+            // إضافة معلومات انتشار المرض في المنطقة
+            content += `
+                <div class="territory-stats">
+                    <p><strong>إحصائيات المرض في المنطقة:</strong></p>
+                    <p>عدد المراكز المسجلة: ${nearbyCenters.length + 1}</p>
+            `;
+
+            // حساب توزيع مستويات الخطورة
+            let riskDistribution = {
+                'منخفض': 0,
+                'متوسط': 0,
+                'مرتفع': 0,
+                'مرتفع جداً': 0
+            };
+
+            // إضافة المنشأة الحالية
+            riskDistribution[risk]++;
+
+            // إضافة المنشآت القريبة
+            nearbyCenters.forEach(center => {
+                // نبحث عن المرض في المنشأة
+                if (center.facility.healthConditions) {
+                    center.facility.healthConditions.forEach(condition => {
+                        if (condition.disease === disease) {
+                            riskDistribution[condition.risk]++;
+                        }
+                    });
+                }
+            });
+
+            content += `
+                <div class="risk-distribution">
+                    <p>توزيع مستويات الخطورة:</p>
+                    <div class="risk-bars">`;
+
+            Object.keys(riskDistribution).forEach(riskLevel => {
+                if (riskDistribution[riskLevel] > 0) {
+                    content += `
+                        <div class="risk-bar-item">
+                            <span class="risk-badge ${getRiskClass(riskLevel)}">${riskLevel}: ${riskDistribution[riskLevel]}</span>
+                        </div>`;
+                }
+            });
+
+            content += `
+                    </div>
+                </div>`;
+
+            content += `
+                </div>
+            </div>`;
+
+            return content;
+        }
+
+        // دالة للبحث عن المنشآت القريبة التي تعالج نفس المرض
+        function findNearbyFacilitiesForDisease(facility, disease, maxDistance) {
+            const nearbyCenters = [];
+            const facilityLat = parseFloat(facility.facilityLatitude);
+            const facilityLng = parseFloat(facility.facilityLongitude);
+
+            facilitiesData.forEach(otherFacility => {
+                // تجاهل نفس المنشأة
+                if (otherFacility.facilityId === facility.facilityId) {
+                    return;
+                }
+
+                const otherLat = parseFloat(otherFacility.facilityLatitude);
+                const otherLng = parseFloat(otherFacility.facilityLongitude);
+
+                if (!isNaN(otherLat) && !isNaN(otherLng)) {
+                    // حساب المسافة بين المنشأتين
+                    const distance = getDistanceFromLatLonInKm(facilityLat, facilityLng, otherLat, otherLng);
+
+                    // تحقق إذا كانت المنشأة قريبة وتعالج نفس المرض
+                    if (distance <= maxDistance && otherFacility.healthConditions) {
+                        const hasSameDisease = otherFacility.healthConditions.some(condition =>
+                            condition.disease === disease
+                        );
+
+                        if (hasSameDisease) {
+                            nearbyCenters.push({
+                                facilityName: otherFacility.facilityName,
+                                facilityTypeVO: otherFacility.facilityTypeVO,
+                                distance: distance,
+                                facility: otherFacility
+                            });
+                        }
+                    }
+                }
+            });
+
+            // ترتيب المنشآت حسب المسافة
+            nearbyCenters.sort((a, b) => a.distance - b.distance);
+
+            return nearbyCenters;
+        }
+
+        // تطبيق الفلاتر على المنشآت
+        function applyFilters() {
+            const facilityType = document.getElementById('facilityType').value;
+            const healthCondition = document.getElementById('healthCondition').value;
+            const riskLevel = document.getElementById('riskLevel').value;
+
+            const filteredFacilities = facilitiesData.filter(facility => {
+                // فلترة حسب نوع المنشأة
+                if (facilityType !== 'all' && facility.facilityTypeVO.facilityTypeId !== facilityType) {
+                    return false;
+                }
+
+                // فلترة حسب الحالة الصحية ومستوى الخطورة
+                if (healthCondition !== 'all' || riskLevel !== 'all') {
+                    // تحقق من وجود حالات صحية
+                    if (!facility.healthConditions || facility.healthConditions.length === 0) {
+                        return false;
+                    }
+
+                    // ابحث عن الحالات التي تطابق الفلاتر
+                    let matchesHealthCondition = healthCondition === 'all';
+                    let matchesRiskLevel = riskLevel === 'all';
+
+                    for (const condition of facility.healthConditions) {
+                        if (healthCondition === 'all' || condition.disease === healthCondition) {
+                            matchesHealthCondition = true;
+                        }
+
+                        if (riskLevel === 'all' || condition.risk === riskLevel) {
+                            matchesRiskLevel = true;
+                        }
+
+                        // إذا تم العثور على تطابق كامل
+                        if ((healthCondition === 'all' || condition.disease === healthCondition) &&
+                            (riskLevel === 'all' || condition.risk === riskLevel)) {
+                            return true;
+                        }
+                    }
+
+                    // إذا كانت أحد الفلاتر غير 'all'، يجب أن تتطابق جميع الفلاتر
+                    if ((healthCondition !== 'all' && !matchesHealthCondition) ||
+                        (riskLevel !== 'all' && !matchesRiskLevel)) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            displayFacilities(filteredFacilities);
+        }
+
+        // تبديل عرض المناطق
+        function toggleTerritories() {
+            if (territoriesVisible) {
+                // إخفاء المناطق
+                territoriesLayer.forEach(circle => circle.setMap(null));
+                document.getElementById('toggleTerritories').innerHTML = '<i class="fas fa-layer-group"></i><div class="toggle-text">إظهار مناطق الانتشار</div>';
+            } else {
+                // إظهار المناطق
+                territoriesLayer.forEach(circle => circle.setMap(map));
+                document.getElementById('toggleTerritories').innerHTML = '<i class="fas fa-layer-group"></i><div class="toggle-text">إخفاء مناطق الانتشار</div>';
+            }
+            territoriesVisible = !territoriesVisible;
+        }
+
+        // إضافة أحداث للفلاتر عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function () {
+            // إضافة أحداث التغيير للفلاتر
+            document.getElementById('facilityType').addEventListener('change', applyFilters);
+            document.getElementById('healthCondition').addEventListener('change', applyFilters);
+            document.getElementById('riskLevel').addEventListener('change', applyFilters);
+        });
+    </script>
+</body>
+
+</html>

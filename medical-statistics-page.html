@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إحصائيات المرضى والتوصيات الطبية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #1a1a2e;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px 15px;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 22px;
+            border-bottom: 2px solid #4aa5ff;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #4aa5ff;
+            color: #fff;
+        }
+
+        .main-content {
+            margin-right: 250px;
+            padding: 30px;
+            width: calc(100% - 250px);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .search-container {
+            display: flex;
+            width: 300px;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            cursor: pointer;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 100%;
+            max-width: 450px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin: 20px 0 40px;
+            color: #2c3e50;
+            font-size: 28px;
+        }
+
+        .stats-dashboard {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stat-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 23%;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .stat-card h4 {
+            color: #3498db;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 15px;
+            }
+
+            .main-content {
+                margin-right: 0;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .cards-container {
+                flex-direction: column;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            .stats-dashboard {
+                flex-direction: column;
+            }
+
+            .stat-card {
+                width: 100%;
+            }
+        }
+
+
+
+        .stat-card {
+            border-top: 4px solid #4aa5ff;
+        }
+
+        .stat-card:nth-child(2) {
+            border-top-color: #52de97;
+        }
+
+        .stat-card:nth-child(3) {
+            border-top-color: #ffad72;
+        }
+
+        .stat-card:nth-child(4) {
+            border-top-color: #ff7eb6;
+        }
+
+        .stat-card:nth-child(5) {
+            border-top-color: #9b59b6;
+        }
+
+        .stat-card:nth-child(6) {
+            border-top-color: #3498db;
+        }
+
+        .chart-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            height: 330px;
+        }
+
+        .chart-medium {
+            grid-column: span 6;
+        }
+
+        .chart-small {
+            grid-column: span 4;
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status.active {
+            background-color: #e3f8e3;
+            color: #15803d;
+        }
+
+        .status.pending {
+            background-color: #fff7e3;
+            color: #b45309;
+        }
+
+        .status.critical {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .status.stable {
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .patient-info-cards {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .patient-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .patient-card h3 {
+            color: #1a1a2e;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .patient-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        .info-value {
+            color: #1a1a2e;
+            font-size: 14px;
+        }
+
+        .data-tables {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .table-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            overflow: hidden;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>لوحة التحكم</h2>
+        <ul>
+            <li><a href="medical-analysis-page.html"><i class="fas fa-chart-pie"></i> تحليل عوامل
+                    الخطورة</a></li>
+            <li><a href="medical-statistics-page.html" class="active"><i class="fas fa-heartbeat"></i> إحصائيات
+                    المرضى</a>
+            </li>
+            <li><a href="medical-map-page.html"><i class="fas fa-map-marker-alt"></i> التحليل الجغرافي</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="search-container">
+                <input type="text" placeholder="البحث...">
+                <button>فلتر</button>
+            </div>
+        </div>
+
+        <h1 class="stats-header">إحصائيات المرضى والتوصيات الطبية</h1>
+
+        <!-- لوحة الإحصائيات -->
+        <div class="stats-dashboard">
+            <div class="stat-card">
+                <h4>ذكور/إناث</h4>
+                <p>58%/42%</p>
+                <div class="trend"><i class="fas fa-minus"></i></div>
+            </div>
+            <div class="stat-card">
+                <h4>حالات حرجة</h4>
+                <p>23</p>
+                <div class="trend down"><i class="fas fa-arrow-down"></i> 7%</div>
+            </div>
+            <div class="stat-card">
+                <h4>إجمالي المرضى</h4>
+                <p>1,248</p>
+            </div>
+            <div class="stat-card">
+                <h4>نسبة التحسن</h4>
+                <p>76%</p>
+            </div>
+        </div>
+
+        <div class="data-tables">
+            <div class="table-container">
+                <h3>أحدث الحالات المسجلة</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>رقم المريض</th>
+                            <th>الاسم</th>
+                            <th>العمر</th>
+                            <th>الحالة</th>
+                            <th>تاريخ التسجيل</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#13476</td>
+                            <td>أحمد محمد</td>
+                            <td>45</td>
+                            <td><span class="status stable">مستقرة</span></td>
+                            <td>15 مايو 2025</td>
+                        </tr>
+                        <tr>
+                            <td>#13475</td>
+                            <td>منى عبدالله</td>
+                            <td>37</td>
+                            <td><span class="status active">تحت العلاج</span></td>
+                            <td>14 مايو 2025</td>
+                        </tr>
+                        <tr>
+                            <td>#13474</td>
+                            <td>خالد عبدالعزيز</td>
+                            <td>62</td>
+                            <td><span class="status critical">حرجة</span></td>
+                            <td>14 مايو 2025</td>
+                        </tr>
+                        <tr>
+                            <td>#13473</td>
+                            <td>سارة محمد</td>
+                            <td>28</td>
+                            <td><span class="status pending">قيد المراجعة</span></td>
+                            <td>13 مايو 2025</td>
+                        </tr>
+                        <tr>
+                            <td>#13472</td>
+                            <td>فيصل خالد</td>
+                            <td>51</td>
+                            <td><span class="status stable">مستقرة</span></td>
+                            <td>12 مايو 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-container">
+                <h3>الحالات المرضية حسب الأعراض</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الأعراض الرئيسية</th>
+                            <th>عدد الحالات</th>
+                            <th>نسبة الانتشار</th>
+                            <th>الحالة العامة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ارتفاع مستوى السكر</td>
+                            <td>426</td>
+                            <td>34.1%</td>
+                            <td><span class="status active">متابعة مستمرة</span></td>
+                        </tr>
+                        <tr>
+                            <td>ارتفاع ضغط الدم</td>
+                            <td>317</td>
+                            <td>25.4%</td>
+                            <td><span class="status stable">مستقرة</span></td>
+                        </tr>
+                        <tr>
+                            <td>زيادة الوزن المفرطة</td>
+                            <td>284</td>
+                            <td>22.8%</td>
+                            <td><span class="status pending">برامج علاجية</span></td>
+                        </tr>
+                        <tr>
+                            <td>أمراض القلب</td>
+                            <td>138</td>
+                            <td>11.1%</td>
+                            <td><span class="status critical">متابعة دقيقة</span></td>
+                        </tr>
+                        <tr>
+                            <td>مشاكل الجهاز التنفسي</td>
+                            <td>83</td>
+                            <td>6.7%</td>
+                            <td><span class="status active">تحت العلاج</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- بطاقات معلومات المرضى -->
+        <div class="patient-info-cards">
+            <div class="patient-card">
+                <h3>معلومات مريض السكري النموذجي</h3>
+                <div class="patient-info">
+                    <div class="info-row">
+                        <span class="info-label">متوسط العمر:</span>
+                        <span class="info-value">48 سنة</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">نسبة الذكور/الإناث:</span>
+                        <span class="info-value">55% / 45%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط مؤشر كتلة الجسم:</span>
+                        <span class="info-value">29.4 كجم/م²</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط مستوى السكر الصائم:</span>
+                        <span class="info-value">176 ملجم/ديسيلتر</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط HbA1c:</span>
+                        <span class="info-value">7.8%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">العامل الوراثي:</span>
+                        <span class="info-value">68% لديهم تاريخ عائلي</span>
+                    </div>
+                </div>
+            </div>
+            <div class="patient-card">
+                <h3>معلومات مريض ضغط الدم النموذجي</h3>
+                <div class="patient-info">
+                    <div class="info-row">
+                        <span class="info-label">متوسط العمر:</span>
+                        <span class="info-value">53 سنة</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">نسبة الذكور/الإناث:</span>
+                        <span class="info-value">62% / 38%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط ضغط الدم:</span>
+                        <span class="info-value">152/94 ملم زئبق</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">مدخنين:</span>
+                        <span class="info-value">42%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">زيادة الوزن/سمنة:</span>
+                        <span class="info-value">65%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">نمط حياة غير نشط:</span>
+                        <span class="info-value">73%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="patient-card">
+                <h3>معلومات مريض أمراض القلب النموذجي</h3>
+                <div class="patient-info">
+                    <div class="info-row">
+                        <span class="info-label">متوسط العمر:</span>
+                        <span class="info-value">58 سنة</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">نسبة الذكور/الإناث:</span>
+                        <span class="info-value">70% / 30%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط الكوليسترول:</span>
+                        <span class="info-value">242 ملجم/ديسيلتر</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط ضغط الدم:</span>
+                        <span class="info-value">148/92 ملم زئبق</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">مدخنين:</span>
+                        <span class="info-value">58%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">تاريخ عائلي:</span>
+                        <span class="info-value">62%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="patient-card">
+                <h3>إحصائيات الاستجابة للعلاج</h3>
+                <div class="patient-info">
+                    <div class="info-row">
+                        <span class="info-label">استجابة ممتازة:</span>
+                        <span class="info-value">43%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">استجابة جيدة:</span>
+                        <span class="info-value">33%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">استجابة متوسطة:</span>
+                        <span class="info-value">18%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">استجابة ضعيفة:</span>
+                        <span class="info-value">6%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">متوسط مدة العلاج:</span>
+                        <span class="info-value">8.4 أشهر</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">نسبة الالتزام بالعلاج:</span>
+                        <span class="info-value">82%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // اكواد جافاسكريبت إضافية يمكن إضافتها هنا
+            console.log('صفحة إحصائيات المرضى والتوصيات جاهزة');
+        });
+
+        // بيانات المرضى
+        const patientData = {
+            "genderDistribution": {
+                "ذكور": 58,
+                "إناث": 42
+            },
+            "ageGenderDistribution": {
+                "labels": ["18-30", "31-45", "46-60", "61-75", "76+"],
+                "male": [82, 145, 238, 187, 73],
+                "female": [94, 118, 162, 112, 37]
+            },
+            "healthStatus": {
+                "مستقرة": 42,
+                "تحت العلاج": 36,
+                "قيد المراجعة": 13,
+                "حرجة": 9
+            },
+            "topDiseases": {
+                "السكري": 34.1,
+                "ضغط الدم": 25.4,
+                "أمراض القلب": 11.1,
+                "السمنة": 22.8,
+                "الجهاز التنفسي": 6.7
+            },
+            "regionDistribution": {
+                "الرياض": 28,
+                "مكة المكرمة": 22,
+                "المدينة المنورة": 12,
+                "القصيم": 8,
+                "المنطقة الشرقية": 18,
+                "عسير": 7,
+                "أخرى": 5
+            }
+        };
+
+        // تعيين ألوان متناسقة للمخططات
+        const colors = [
+            'rgba(74, 165, 255, 0.7)',
+            'rgba(82, 222, 151, 0.7)',
+            'rgba(255, 173, 114, 0.7)',
+            'rgba(255, 126, 182, 0.7)',
+            'rgba(114, 158, 255, 0.7)',
+            'rgba(130, 219, 216, 0.7)',
+            'rgba(205, 180, 219, 0.7)'
+        ];
+
+        const borderColors = [
+            'rgba(74, 165, 255, 1)',
+            'rgba(82, 222, 151, 1)',
+            'rgba(255, 173, 114, 1)',
+            'rgba(255, 126, 182, 1)',
+            'rgba(114, 158, 255, 1)',
+            'rgba(130, 219, 216, 1)',
+            'rgba(205, 180, 219, 1)'
+        ];
+
+        // إعدادات مشتركة للمخططات
+        Chart.defaults.font.family = 'Cairo';
+        Chart.defaults.font.size = 12;
+        Chart.defaults.plugins.legend.labels.boxWidth = 12;
+        Chart.defaults.plugins.legend.labels.padding = 5;
+
+        // 1. مخطط توزيع العمر والجنس
+        const ageGenderCtx = document.getElementById('ageGenderChart').getContext('2d');
+        new Chart(ageGenderCtx, {
+            type: 'bar',
+            data: {
+                labels: patientData.ageGenderDistribution.labels,
+                datasets: [
+                    {
+                        label: 'ذكور',
+                        data: patientData.ageGenderDistribution.male,
+                        backgroundColor: 'rgba(74, 165, 255, 0.7)',
+                        borderColor: 'rgba(74, 165, 255, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'إناث',
+                        data: patientData.ageGenderDistribution.female,
+                        backgroundColor: 'rgba(255, 126, 182, 0.7)',
+                        borderColor: 'rgba(255, 126, 182, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            font: {
+                                size: 11
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'عدد المرضى',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'الفئة العمرية',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 2. مخطط توزيع الحالة الصحية
+        const healthStatusCtx = document.getElementById('healthStatusChart').getContext('2d');
+        new Chart(healthStatusCtx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(patientData.healthStatus),
+                datasets: [{
+                    data: Object.values(patientData.healthStatus),
+                    backgroundColor: [
+                        'rgba(82, 222, 151, 0.7)',
+                        'rgba(74, 165, 255, 0.7)',
+                        'rgba(255, 173, 114, 0.7)',
+                        'rgba(255, 126, 182, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(82, 222, 151, 1)',
+                        'rgba(74, 165, 255, 1)',
+                        'rgba(255, 173, 114, 1)',
+                        'rgba(255, 126, 182, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function (value) {
+                                return value + '%';
+                            },
+                            font: {
+                                size: 11
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        },
+                        title: {
+                            display: true,
+                            text: 'النسبة المئوية',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        // 3. مخطط توزيع الجنس
+        const genderDistributionCtx = document.getElementById('genderDistributionChart').getContext('2d');
+        new Chart(genderDistributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(patientData.genderDistribution),
+                datasets: [{
+                    data: Object.values(patientData.genderDistribution),
+                    backgroundColor: [
+                        'rgba(74, 165, 255, 0.7)',
+                        'rgba(255, 126, 182, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(74, 165, 255, 1)',
+                        'rgba(255, 126, 182, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: {
+                                size: 11
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        // 4. مخطط أكثر الأمراض انتشارًا
+        const diseasesCtx = document.getElementById('diseasesChart').getContext('2d');
+        new Chart(diseasesCtx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(patientData.topDiseases),
+                datasets: [{
+                    data: Object.values(patientData.topDiseases),
+                    backgroundColor: colors,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: {
+                                size: 10
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 5. مخطط توزيع المرضى حسب المنطقة
+        const regionDistributionCtx = document.getElementById('regionDistributionChart').getContext('2d');
+        new Chart(regionDistributionCtx, {
+            type: 'polarArea',
+            data: {
+                labels: Object.keys(patientData.regionDistribution),
+                datasets: [{
+                    data: Object.values(patientData.regionDistribution),
+                    backgroundColor: colors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: {
+                                size: 9
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        ticks: {
+                            display: false
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
